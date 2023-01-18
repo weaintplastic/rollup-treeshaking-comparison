@@ -1,7 +1,21 @@
 # rollup-treeshaking-comparison
 A comparison of tree-shaking capabilities of class declarations between different rollup versions.
 
-We've noticed a difference in how unused class declarations are handled during tree-shaking between different version of rollup. The critical point seems to be if a class is extending another one.
+# Getting Started
+
+```
+npm i
+npm run build
+```
+
+# Overview
+
+We've noticed a difference in how unused class declarations are handled during tree-shaking between different version of rollup.
+
+
+# Details
+
+The critical point seems to be if a class is extending another one.
 When that's the case rollup 2.53.0 and above (including v3) seem to include the class in the bundle even though unused. Prior versions successfully clear out those classes.
 
 
